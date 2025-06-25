@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import { CiSearch } from 'react-icons/ci';
 
 import { Container, LogoContainer, SignIn, Options } from './style';
 
 import logo from '../../assets/logo-16x16.png';
 
-export const Header = () => {
+export default function Header() {
   return (
     <Container>
       <nav>
@@ -38,4 +38,4 @@ export const Header = () => {
       </Options>
     </Container>
   );
-};
+}
