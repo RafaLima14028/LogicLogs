@@ -5,6 +5,7 @@ import { GlobalStyles } from './styles/GlobalStyles';
 
 import Home from './pages/Home';
 import Posts from './pages/Posts';
+import About from './pages/About';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/about' element={<About />} />
         <Route path="/posts/:id" element={<Posts />} />
       </Routes>
     </BrowserRouter>
