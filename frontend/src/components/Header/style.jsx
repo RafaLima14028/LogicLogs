@@ -61,6 +61,7 @@ export const Options = styled.div`
     input {
       border-radius: 12px;
       border: none;
+      outline: none;
       background-color: ${backgroundSecundaryColor};
       padding: 10px 20px;
       padding-left: 40px;
@@ -68,11 +69,21 @@ export const Options = styled.div`
       width: 160px;
       font-size: 1rem;
       font-size: 1rem;
+      transition: all 350ms ease-in-out;
     }
 
     input::placeholder {
       color: ${fontSecundaryColor};
       font-size: 1.1rem;
+    }
+
+    input:focus,
+    input:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    input:focus {
+      width: 300px;
     }
 
     .searchIcon {
@@ -93,4 +104,10 @@ export const SignIn = styled.button`
   background-color: ${backgroundSecundaryColor};
   font-weight: bold;
   font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
 `;

@@ -31,7 +31,7 @@ export default function Header() {
       <Options>
         <div>
           <CiSearch className="searchIcon" />
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="Search" autoComplete="none" />
         </div>
 
         <SignIn>Sign In</SignIn>

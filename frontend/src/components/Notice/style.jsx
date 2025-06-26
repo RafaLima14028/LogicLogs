@@ -12,6 +12,12 @@ export const Container = styled.section`
   width: 960px;
   height: 200px;
   padding: 16px;
+  transition: all 350ms ease-in-out;
+  border-radius: 12px;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
 
   .img-post {
     border-radius: 12px;
