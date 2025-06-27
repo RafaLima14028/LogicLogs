@@ -107,6 +107,11 @@ export const SignIn = styled.button`
   cursor: pointer;
   transition: all 350ms ease-in-out;
 
+  a {
+    text-decoration: none;
+    color: unset;
+  }
+
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }

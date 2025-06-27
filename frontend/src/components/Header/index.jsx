@@ -6,6 +6,8 @@ import { Container, LogoContainer, SignIn, Options } from './style';
 import logo from '../../assets/logo-16x16.png';
 
 export default function Header() {
+  let isLogged = false;
+
   return (
     <Container>
       <nav>
@@ -34,7 +36,13 @@ export default function Header() {
           <input type="text" placeholder="Search" autoComplete="none" />
         </div>
 
-        <SignIn>Sign In</SignIn>
+        <SignIn>
+          {isLogged ? (
+            <a href="/new-post">New Post</a>
+          ) : (
+            <a href="/login">Sign In</a>
+          )}
+        </SignIn>
       </Options>
     </Container>
   );
