@@ -1,6 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Header from '../../components/Header';
+import Loading from '../../components/Loading';
 
 import {
   Container,
@@ -14,10 +15,18 @@ import {
 export default function NewPost() {
   const inputFileRef = useRef(null);
 
+  const [isLoading, setIsLoading] = useState(false);
+
   function handleSubmit(e) {
     e.preventDefault();
 
+    setIsLoading(true);
+
     // console.log(inputFileRef.current.files);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
   }
 
   function handleBrowseFileImg() {
@@ -26,6 +35,8 @@ export default function NewPost() {
 
   return (
     <>
+      <Loading isLoading={isLoading} />
+
       <Header />
 
       <Container>
