@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import Header from '../../components/Header';
 
@@ -12,8 +12,16 @@ import {
 } from './styles';
 
 export default function NewPost() {
+  const inputFileRef = useRef(null);
+
   function handleSubmit(e) {
     e.preventDefault();
+
+    // console.log(inputFileRef.current.files);
+  }
+
+  function handleBrowseFileImg() {
+    inputFileRef.current.click();
   }
 
   return (
@@ -41,7 +49,7 @@ export default function NewPost() {
 
           <WrapperInput>
             <span>Featured Image</span>
-            <input type="file" />
+            <input type="file" accept="image/*" ref={inputFileRef} />
 
             <ImageInput>
               <div>
@@ -50,7 +58,7 @@ export default function NewPost() {
                 <p>Drop and drop an image here, or click to select a file</p>
               </div>
 
-              <button>Browse Files</button>
+              <button onClick={handleBrowseFileImg}>Browse Files</button>
             </ImageInput>
           </WrapperInput>
 
